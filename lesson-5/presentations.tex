@@ -1,0 +1,21 @@
+% the `slides` class was written for "classical" printed slides (does not have support on-screen presentations like PowerPoint/Google Slides does)
+% two extension classes of `slides` that have these features are `beamer` and `powerdot`
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\begin{document}
+
+\begin{frame}
+	\frametitle{A first frame}
+	Some text
+\end{frame}
+
+\begin{frame}
+	\frametitle{A second frame}
+	Different text
+	\begin{itemize}
+		\item<1-> First item
+		\item<2-> Second item
+	\end{itemize}
+\end{frame}
+
+\end{document}
