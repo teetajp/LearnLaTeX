@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\begin{document}
+
+\lipsum[1-4]
+
+\begin{center}
+  \includegraphics[width = 0.5\textwidth]{garfield.JPG}
+\end{center}
+
+\lipsum[5-7]
+\begin{center}
+  \includegraphics[width = 0.5\linewidth]{garfield.JPG}
+\end{center}
+
+\lipsum[9-12]
+
+% \textwidth is the width of the WHOLE text block
+% \linewidth is the width of just the current line
+
+% so in a two-column text block, \linewidth is about half the size of \textwidth
+% without the `twocolumn` option, the images look identical
+
+\lipsum[13-17]
+Text location.
+\begin{figure}[h] % options: htbp
+	\centering % can use this inside a float; avoids both the float and center environment adding extra vertical space
+	\includegraphics[width=0.5\textwidth, angle=75, scale=0.5]{garfield.JPG}
+	\caption{An example image}
+\end{figure}
+\lipsum[18-25]
+
+\begin{figure}[bp] % options: htbp
+	\centering % can use this inside a float; avoids both the float and center environment adding extra vertical space
+	\includegraphics[width=0.5\textwidth, angle=75, scale=0.5]{garfield.JPG}
+	\caption{An example image}
+\end{figure}
+
+\lipsum[26-30]
+\begin{figure}[ht] % options: htbp
+	\centering % can use this inside a float; avoids both the float and center environment adding extra vertical space
+	\includegraphics[width=0.5\textwidth, angle=45, scale=0.3]{example-image}
+	\caption{An example image}
+\end{figure}
+
+\lipsum[31-40]
+
+\lipsum[41-50]
+\begin{figure}[p] % options: htbp
+	\centering % can use this inside a float; avoids both the float and center environment adding extra vertical space
+	\includegraphics[width=0.5\textwidth, angle=75, scale=0.5]{garfield.JPG}
+	\caption{An example image}
+\end{figure}
+\lipsum[51-60]
+
+
+\end{document}
