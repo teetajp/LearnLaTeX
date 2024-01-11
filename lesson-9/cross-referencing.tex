@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref} % turns cross-references into links
+% without the [hidelinks] option, we will see a red border surrounding the link textbox, but with the option, it will hide the borders
+\usepackage{graphicx}
+
+\begin{document}
+Hey world!
+
+This is a first document
+
+\section{Title of the first section}
+
+Text of material for the first section.
+\subsubsection{Subsubsection title}
+
+\begin{figure}[hp]
+	\centering
+	\includegraphics{example-image}	\caption{An example image 1}
+	\label{fig:exampleone}
+\end{figure}
+
+\begin{enumerate}
+\label{ol:labelthree}
+  \item Apple
+  \item Banana
+  \item Car
+  \label{li:car}
+
+
+\end{enumerate}
+
+
+\subsection{Subsection of the first section}
+\label{subsec:labelone}
+
+Text of material for the first subsection.
+
+\begin{figure}[hp]
+	\centering
+	% \label{fig:exampletwo}
+	\includegraphics[angle=45]{example-image}	\caption{An example image 1	\label{fig:exampletwo}}
+	% \label{fig:exampletwo}
+	
+\end{figure}
+
+
+\begin{equation}
+  e^{i\pi}+1 = 0
+\label{eq:labeltwo}
+\end{equation}
+% \label{eq:labeltwo}
+
+In subsection~\ref{subsec:labelone} is equation~\ref{eq:labeltwo}.
+% putting a `~` prevents LaTeX from breaking the line there before the reference
+
+% \label always has to come after (for floats, inside \caption if possible) the thing you want to refer to
+
+
+
+
+In list~\ref{ol:labelthree} is item~\ref{li:car}.
+
+% always take two compilations for labels to work properly when adding new labels or adding new numbered section
+
+We also have an image, shown in figure~\ref{fig:exampleone} and figure~\ref{fig:exampletwo}.
+
+% if we put the \label before the \caption in the float, we get the last section or header number.
+
+% same for the `equation` environment; if we put the label inside the \begin{equation} ... \end{equation}, we get the correct numbering; but if we put it outside, the we get the previous numbered entity that is not the equation.
+\end{document}
