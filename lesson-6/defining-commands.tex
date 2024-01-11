@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+
+\usepackage{xparse} % Only needd for older LaTeX releases
+\usepackage{xcolor}
+
+%\newcommand\kw[1]{\textbf{\itshape #1}} % can easily change styling in commands
+% \newcommand\kw[1]{\textbf{\textcolor{blue}{\itshape #1}}}
+\newcommand\kw[2][blue]{\textcolor{#1}{\itshape #2}}
+% allows for optional argument foor only the first parameter; otherwise use xparse
+
+\NewDocumentCommand\kwtwo{O{red} m}{\textcolor{#1}{\itshape #2}}
+% `O{default}` is optional; `m` is mandatory
+
+\NewDocumentCommand\kwthree{O{green} O{pears}}{\textcolor{#1}{\itshape #2}}
+
+\begin{document}
+
+Something about \kw{apples} and \kw{oranges}.
+
+Something about \kwtwo{apples} and \kwtwo{oranges}.
+
+Something about \kwthree \ and \kwthree.
+
+\end{document}
