@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{learnlatex.bib} % file of reference info
+
+\begin{document}
+The mathematics showcase is from \autocite{Graham1995}.
+
+Some more complex citations: \parencite{Graham1995} or
+\textcite{Thomas2008} or possibly \citetitle{Graham1995}.
+
+\autocite[56]{Thomas2008}
+
+\autocite[See][45-48]{Graham1995}
+
+Together \autocite{Thomas2008,Graham1995}
+
+\cite{Thomas2008}
+
+\printbibliography
+\end{document}
+
+% run `pdflatex` (or LaTeX), `biber`, `pdflatex` (LaTeX)
+% or simply `pdflatexmk`
+
+% or put `% !TEX TS-program = pdflatexmk` at the top of your .tex file
