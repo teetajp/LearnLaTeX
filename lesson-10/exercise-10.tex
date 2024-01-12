@@ -1,0 +1,48 @@
+%\documentclass{article}
+%\documentclass[fleqn]{article} % flush left equation
+%\documentclass[leqno]{article} % left equation numbers
+\documentclass[fleqn,leqno]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+Linear equation:
+\[
+  y = mx + c
+\]
+
+Linear equation: $y = mx + c$.
+
+Integral:
+\[
+\int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\]
+
+Integral:
+\begin{equation}
+\int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\end{equation}
+
+Integral:
+\begin{equation*}
+\int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\end{equation*}
+
+Integral: $\int_{-\infty}^{+\infty} e^{-x^2} \, dx$ % the integration symbol gets significantly reduced in size when using it in-line compared to display mode.
+
+Greek alphabet
+\[
+\alpha  \beta \gamma \delta \Delta \epsilon \varepsilon \zeta \eta \gamma \Gamma
+\]
+
+$\text{text}$
+$\mathit{italics}$
+$\mathrm{romanized}$
+$\mathit{\mathrm{nested text}}$
+$\mathrm{\mathit{nested text}}$
+$\mathbf{nested text \mathit{works} like this}$
+% for nested text, the innermost/local styling applies, probably so allow for different styles within a nested text (like when we want to emphasize something)
+
+\end{document}

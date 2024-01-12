@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{mathtools} % loads amsmath and other several additional features
+
+\begin{document}
+
+Gather
+\begin{gather}
+  P(x)=ax^{5}+bx^{4}+cx^{3}+dx^{2}+ex +f\\
+  x^2+x=10
+\end{gather}
+
+Multline
+\begin{multline*}
+   (a+b+c+d)x^{5}+(b+c+d+e)x^{4} \\
+   	+(xyz*abcdef+ijk^{5}) \\
+    +(c+d+e+f)x^{3}+(d+e+f+a)x^{2}+(e+f+a+b)x\\
+    + (f+a+b+c)
+\end{multline*}
+
+Aligned equations
+\begin{align*}
+a &= b+1   &  c &= d+2  &  e &= f+3 & x &> 7  \\
+r &= s^{2} &  t &=u^{3} &  v &= w^{4}
+\end{align*}
+
+% \newpage
+
+-ed variants (works for align, gather, etc.)
+
+Aligned:
+\[
+\left.\begin{aligned}
+a&=b\\
+c&=d
+\end{aligned}\right\}
+\Longrightarrow
+\left\{\begin{aligned}
+b&=a\\
+d&=c
+\end{aligned}\right.
+\]
+
+\texttt{aligned} arguments
+
+\begin{itemize}
+\item 
+$\begin{aligned}[t]
+a&=b\\
+c&=d
+\end{aligned}$
+\item 
+$\begin{aligned}
+a&=b\\
+c&=d
+\end{aligned}$
+\end{itemize}
+
+% \newpage
+
+$(x+y)(x-y)=x^{2}-y^{2}$
+
+{\boldmath $(x+y)(x-y)=x^{2}-y^{2}$ $\pi r^2$}
+% \boldmath sets the current scope to bold, so it should be used inside an expression, otherwise it will affect the rest of the document until we call another command to change the math styling
+
+$(x+\mathbf{y})(x-\mathbf{y})=x^{2}-{\mathbf{y}}^{2}$
+$\mathbf{\pi} r^2$ % bad use of \mathbf
+
+% \mathbf only works on letters or words, for symbols, use \boldmath or \bm
+\vspace{1cm}
+
+$(x+\mathbf{y})(x-\mathbf{y})=x^{2}-{\mathbf{y}}^{2}$
+
+$(x+\bm{y})(x-\bm{y}) \bm{=} x^{2}-{\bm{y}}^{2}$
+
+$\alpha + \bm{\alpha} < \beta + \bm{\beta}$
+
+
+% `mathtools` package
+\[
+\begin{pmatrix*}[r]
+  10&11\\
+   1&2\\
+  -5&-6
+\end{pmatrix*}
+\]
+
+\end{document}
