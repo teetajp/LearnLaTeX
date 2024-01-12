@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{bm}
+
+\begin{document}
+
+\begin{titlepage}
+\lipsum[1]
+
+abcedf\.hijkl\,mno\;pqrstu\;vwxyz
+
+\textit{abcedf\.hijkl\,mno\;pqrstu\;vwxyz}
+
+\textit{\textbf{abcedf\.hijkl\,mno\;pqrstu\;vwxyz}}
+
+$ abcedfhijkl\,mno\;pqrstu\;vwxyz $ % \. does not work in math mode
+
+$ \textrm{abcedfhijkl\,mno\;pqrstu\;vwxyz} $
+
+$ \textrm{\textbf{abcedfhijkl\,mno\;pqrstu\;vwxyz + 1 $\alpha$} * 2 $\Gamma$} $
+
+% ^ \textrm turns the expression into text, need to do inline-math again using $...$ to allow for math symbols inside
+
+% ^ styling also doesn't apply to math expression
+
+% $ \itshape abcedfhijkl\,mno\;pqrstu\;vwxyz $
+
+$ \mathrm{\mathbf{abcedfhijkl\,mno\;pqrstu\;vwxyz + 1 \alpha} * 2 \Gamma} $
+
+\boldmath$ { abcedfhijkl\,mno\;pqrstu\;vwxyz + 1 \alpha * 2 \Gamma} $
+% in math mode, the font styling does not stack; only the most recent/inner-most styling gets applied
+
+
+1 + 2 $ 1 + 2$
+\unboldmath
+
+1 + 2 $ 1 + 2$
+% commands like \itshape also doesn't work in math mode
+
+{Normal text
+\tiny
+\lipsum[2]
+}
+\lipsum[3]
+
+{Normal text
+\tiny
+\lipsum[2]
+\par
+}
+\lipsum[3]
+
+{Normal text
+\huge
+\lipsum[4]
+}
+\lipsum[5]
+
+{Normal text
+\huge
+\lipsum[4]
+\par
+}
+\lipsum[5]
+
+% if we don't put \par before closing the group, it can affect the line height of the line continuing the paragraph outside the group.
+
+\bfseries % no affect on the text outside this environment
+\end{titlepage}
+
+One small paragraph, which we have filled out a little to make sure you can
+see the effect here!
+
+One small paragraph, which we have filled out a little to make sure you can
+see the effect here!
+
+\noindent  One small paragraph, which we have filled out a little to make sure
+you can see the effect here!
+
+\end{document}

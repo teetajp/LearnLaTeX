@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+Some text \hspace{1cm} more text.
+
+\vspace{10cm}
+
+Even more text.
+
+Thin space \, like this
+
+Math mode:
+$ab cd \: ef \; ghijk \! lmnop$
+
+Short bits of text:
+
+Let's have some font fun: \textbf{bold}, \textit{italic}, \textrm{roman},
+\textsf{sans serif}, \texttt{monospaced}, and \textsc{small caps}.
+
+
+Normal text.
+% commands for running text doesn't stop, they apply to the most loocal scope; so place them in a group to prevent them from applying to the whole document.
+
+{\itshape
+
+This text is italic.
+
+\bfseries
+So is this: the effect is not limited to a paragraph.
+
+}
+
+No more italics outside the group.
+
+Normal text
+\begin{center}
+{\itshape\large Some text\par} % use \par to end a paragraph (break)
+Normal text
+{\bfseries\small Much smaller text\par}
+\end{center}
+
+\end{document}
