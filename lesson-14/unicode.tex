@@ -1,0 +1,11 @@
+% !TEX xelatex
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}
+\newfontfamily\cjkfont{FandolSong-Regular.otf}
+% if some unicode characters (like the Chinese characters below) are not defined in a font, then LaTeX will throw an error, so we define those characters in another font and change to it before using the characters
+\begin{document}
+
+ABC → αβγ → {\cjkfont 你好}
+
+\end{document}
