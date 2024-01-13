@@ -1,0 +1,80 @@
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage{array}
+\addbibresource{biblatex-examples.bib}
+
+\title{A Sample Book}
+\author{John Doe \and Joe Bloggs}
+
+\IfFileExists{\jobname.run.xml}
+{
+\includeonly{
+  front,
+  chap1,
+  chap2,
+  append
+  }
+}
+{
+% Do a full document initially to generate
+% all the aux files
+}
+
+\begin{document}
+\frontmatter
+\include{front}
+
+% =========================
+\mainmatter
+\include{chap1}
+
+% need to wrap tabular data in a `table` environment to produce caption for \listoftables
+\begin{table}
+    \begin{tabular}{llll}
+    	Food           & Carbs & Protein & Fats \\
+    	chicken breast &    0g & 25g     & 4g \\
+    	oats           &   35g & 5g      & 0g \\
+    	olive oil      &    0g & 0g      & 12g \\
+    \end{tabular}
+    \caption{Common Foods and Macronutrients}
+\end{table}    
+
+\begin{table}
+    \begin{tabular}{lll}
+      Animal & Food  & Size   \\
+      dog    & meat  & medium \\
+      horse  & hay   & large  \\
+      frog   & flies & small  \\
+    \end{tabular}
+    \caption{Animals, Foods, and Sizes}
+\end{table}
+
+\include{chap2}
+
+\begin{figure}[hp]
+	\centering
+	\includegraphics{example-image-a.png}
+	\caption{An example image A}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics{example-image.png}
+	\caption{An example image}
+\end{figure}
+
+\appendix
+\include{append}
+\chapter{First Chapter after Appendix}
+\listoftables
+\listoffigures
+
+
+% ========================
+\backmatter
+\printbibliography
+\newpage
+\input{backcover}
+\end{document}

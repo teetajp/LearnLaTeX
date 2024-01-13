@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{imakeidx}
+\makeindex
+\begin{document}
+Some text about Foo\index{foo}.
+More text\index{baz!bar}.
+Even more text\index{alpha@$\alpha$}.
+More text about a different part of baz\index{baz!wibble}.
+
+\clearpage
+Some text about Foo\index{foo} again, on a different page.
+Even more text\index{beta@$\beta$}. % `beta` is the "sort text" used to find the spot to place the index entry among other entries, while `\beta` is the displayed index entry
+Even more text\index{gamma@$\gamma$}.
+\printindex
+\end{document}
